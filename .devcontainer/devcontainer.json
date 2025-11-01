@@ -1,0 +1,25 @@
+{
+  "name": "esp32c6",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "runArgs": [
+    "--group-add=plugdev",
+    "--device-cgroup-rule=c 166:* rmw",
+    "--device-cgroup-rule=c 189:* rmw",
+    "-v=/dev/bus/usb:/dev/bus/usb",
+    "-v=${localEnv:HOME}/.ssh/id_rsa:/home/vscode/.ssh/id_rsa:ro",
+    "-v=${localEnv:HOME}/.ssh/id_rsa.pub:/home/vscode/.ssh/id_rsa.pub:ro"
+  ],
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.vscode-github-actions",
+        "probe-rs.probe-rs-debugger",
+        "rust-lang.rust-analyzer",
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  }
+}

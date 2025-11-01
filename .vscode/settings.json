@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "binstall",
+        "rustup"
+    ],
+    "rust-analyzer.cargo.allTargets": false,
+    "rust-analyzer.cargo.target": "riscv32imac-unknown-none-elf",
+}
