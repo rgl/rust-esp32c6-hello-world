@@ -131,3 +131,11 @@ esp-generate \
   --option vscode \
   rust-esp32c6-hello-world
 ```
+
+List this repository dependencies (and which have newer versions):
+
+**NB** This has to be executed outside of the Dev Container.
+
+```bash
+GITHUB_COM_TOKEN='YOUR_GITHUB_PERSONAL_TOKEN' ./renovate.sh
+```
